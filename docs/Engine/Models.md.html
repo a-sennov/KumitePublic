@@ -1,0 +1,37 @@
+Supported model formats
+=======================
+
+## DCC exchange
+Formats used to export models from DCC tools.
+
+### FBX
+Not yet directly readable by engine, must be processed by 
+[FBX2IQE tool](../Tools/FBX2IQE.md.html) to make IQE (Inter Quake Exchange) 
+file, which then has to be converted to IQM by [IQM compiler](../Tools/IQM.md.html).
+
+FBX is industry standard for delivering 3D models into game engines.
+
+### Wavefront OBJ
+Simple, directly readable by engine in development mode, text based format.
+Supported by almost every major 3D software. Ideal for quick tests and
+prototypes.
+
+### Kumite DAZStudio plugin
+Exports models and animations directly into IQE or IQM.
+
+## Directly readable, development build
+
+* IQM
+* Wavefront OBJ
+
+Support for legacy formats available in Tesseract (MD2, MD3, MD5 etc.) has 
+been dropped.
+
+## Directly readable, production build
+
+* IQM only
+
+All files are automatically converted to IQM in the process of release
+packaging.
+
+<!-- Markdeep: --><style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style><script src="../markdeep.js"></script></script><script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script> 
