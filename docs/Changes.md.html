@@ -1,0 +1,60 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="./kumite.css"/>
+</head>
+<body>
+<header id="header" class="headroom" role="banner">
+<div style="background: white; width: 100%; height: 36px;">
+<span class="md" style="position: absolute; right: 60px;"><a href="./Kumite.md.html">Docs home</a></span>
+</div>
+</header>
+<markdeep>
+
+In the works
+============
+* More flexible entity/simulation framework
+    * Save/load games
+    * Better editting workflow
+* LOD
+    * Skeletal models, skeletons, animations
+    * Large scale, octree, HLOD
+    * Streaming
+* Animation blending framework
+    * Blendspaces, aim offsets, trees, hierarchical state machines
+    * Root motion
+* Better audio solution
+    * Interactive music
+    * 3D spatialization
+* Release packaging
+    * Offline texture compression
+    * Launcher/Updater app
+
+Implemented major
+=================
+* [FBX converter using Autodesk FBX SDK](Tools/FBX2IQE.md.html).
+* [LOD support for mapmodels](Engine/LOD.md.html).
+
+Implemented minor
+=================
+* Switched to stb::image because of need to directly support PSD.
+* IQM and OBJ loaders treat materials as submeshes 
+* FBX-IQE pipeline combines all polies with the same material together
+
+Deprecated features
+===================
+* Win32 build. Only 64bit versions will be supported on all platforms.
+* Mumble audio. Integrated VOIP solution is needed.
+* Support for md2, md3, md5 and smd model formats.
+
+</markdeep>
+
+<script src="./headroom.js"></script>
+<script>
+var myElement = document.querySelector("header");
+var headroom  = new Headroom(myElement);
+headroom.init();
+window.markdeepOptions = {mode: 'html'};</script>
+<script src="./markdeep.js"></script>
+
+</body>
+</html>

@@ -1,3 +1,15 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="../kumite.css"/>
+</head>
+<body>
+<header id="header" class="headroom" role="banner">
+<div style="background: white; width: 100%; height: 36px;">
+<span class="md" style="position: absolute; right: 60px;"><a href="../Kumite.md.html">Docs home</a></span>
+</div>
+</header>
+<markdeep>
+
 Level of detail support in Kumite engine
 ========================================
 LODs are supported at different levels: static meshes, skeletal meshes (WIP), hierarchical
@@ -149,4 +161,15 @@ TBD
 ## Auto billboards generation
 TBD
 
-<!-- Markdeep: --><style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style><script src="../markdeep.js"></script></script><script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script> 
+</markdeep>
+
+<script src="../headroom.js"></script>
+<script>
+var myElement = document.querySelector("header");
+var headroom  = new Headroom(myElement);
+headroom.init();
+window.markdeepOptions = {mode: 'html'};</script>
+<script src="../markdeep.js"></script>
+
+</body>
+</html>
